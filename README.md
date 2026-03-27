@@ -39,7 +39,11 @@ Para ejecutar este proyecto en modo desarrollo, necesitas tener instalado:
     ```
 3.  Inicia la aplicación en modo desarrollo:
     ```bash
+    # Usando npm (recomendado si no tienes tauri-cli global)
     npm run tauri:dev
+
+    # O usando Cargo directamente
+    cargo tauri dev
     ```
 
 ### 🛠️ Funcionamiento
@@ -82,7 +86,11 @@ To run this project in development mode, you need to have installed:
     ```
 3.  Launch the application in development mode:
     ```bash
+    # Using npm (recommended if tauri-cli is not globally installed)
     npm run tauri:dev
+
+    # Or using Cargo directly
+    cargo tauri dev
     ```
 
 ### 🛠️ How it works
