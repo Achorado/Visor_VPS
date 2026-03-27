@@ -46,6 +46,22 @@ Para ejecutar este proyecto en modo desarrollo, necesitas tener instalado:
     cargo tauri dev
     ```
 
+### 🔐 Configuración de SSH (Recomendado)
+
+Aunque puedes usar contraseñas, se recomienda usar llaves SSH para mayor seguridad. Si no tienes una, puedes generarla así:
+
+1.  Abre una terminal en tu PC.
+2.  Ejecuta el siguiente comando (puedes cambiar el comentario):
+    ```bash
+    ssh-keygen -t rsa -b 4096 -C "tu_email@ejemplo.com"
+    ```
+3.  Presiona `Enter` para guardar en la ruta por defecto.
+4.  (Opcional) Ponle una contraseña o déjala en blanco.
+5.  Copia tu llave pública al servidor:
+    ```bash
+    ssh-copy-id usuario@ip_de_tu_servidor
+    ```
+
 ### 🛠️ Funcionamiento
 La aplicación utiliza una base de datos SQLite local (`visor_vps.db`) para almacenar las configuraciones de tus servidores de forma segura. Todas las comunicaciones se realizan vía SSH, cifrando los comandos y gestionando la autenticación de forma nativa desde el backend en Rust.
 
@@ -91,6 +107,22 @@ To run this project in development mode, you need to have installed:
 
     # Or using Cargo directly
     cargo tauri dev
+    ```
+
+### 🔐 SSH Configuration (Recommended)
+
+While you can use passwords, using SSH keys is recommended for better security. If you don't have one, you can generate it like this:
+
+1.  Open a terminal on your PC.
+2.  Run the following command (you can change the comment):
+    ```bash
+    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    ```
+3.  Press `Enter` to save in the default path.
+4.  (Optional) Set a passphrase or leave it blank.
+5.  Copy your public key to the server:
+    ```bash
+    ssh-copy-id user@your_server_ip
     ```
 
 ### 🛠️ How it works
